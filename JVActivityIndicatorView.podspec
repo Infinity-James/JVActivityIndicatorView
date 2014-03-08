@@ -49,7 +49,7 @@ Pod::Spec.new do |s|
   #  found CocoaPods accept just the names.
   #
 
-  s.author             = { "James Valaitis" => "jamesvalaitis@gmail.com" }
+  s.author             = { "James Valaitis" => "james@infinityjames.com" }
   # s.authors          = { "James Valaitis" => "jamesvalaitis@gmail.com", "other author" => "email@address.com" }
   # s.author           = 'James Valaitis', 'other author'
   # s.social_media_url = "http://twitter.com/James Valaitis"
@@ -60,7 +60,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
+  s.platform     = :ios
   # s.platform     = :ios, '5.0'
 
   #  When using multiple platforms
@@ -74,7 +74,10 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Infinity-James/JVActivityIndicatorView.git", :commit => "291f2c5778e2d3fdd70c5361d11643b40b22ce79" }
+  s.source       = { 
+	:git => "https://github.com/Infinity-James/JVActivityIndicatorView.git",
+	:tag => "0.1.0" 
+}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -85,7 +88,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
+  s.source_files  = '*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
 
   # s.public_header_files = 'Classes/**/*.h'
@@ -100,7 +103,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  # s.resources = "Resources/*.png"
+  s.resources = "*.png"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -124,7 +127,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2' }
   # s.dependency 'JSONKit', '~> 1.4'
